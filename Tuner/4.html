@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Gloria+Hallelujah&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background:darkseagreen;
+        }
+        a{
+            text-decoration: none;
+            font-size: xx-large;
+            padding:5px;
+            color:orange;
+        }
+        .main{
+         
+            text-align: center;
+            /* background:linear-gradient(to right,rgb(131, 11, 131),yellow,rgb(184, 27, 27)) */
+            /* background-color:darkgreen; */
+            background-color:black ;
+           
+
+        }
+        nav{
+          font-style: italic;
+            padding:5px;
+           text-align:center;
+           color:orange;
+           border-radius: 13px;
+           /* background-color: black; */
+        }
+        .line{
+            display: inline-block;
+    height: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom:10px;
+   border-width: 9px;
+   border-style:solid;
+   border-radius: 39px;
+   border-color: dimgray;
+   /* border-left-color: darkred; */
+   /* border-color: darkorange; */
+   background:linear-gradient(to right,rgb(131, 11, 131),yellow,rgb(184, 27, 27))
+   /* background:linear-gradient(to right,rgb(85, 83, 83),rgb(61, 211, 238),grey); */
+  
+        }
+        .line1{
+            width: 3px; 
+    background-color:rgb(202, 17, 17); 
+    height: 100%; 
+    float: left;
+    margin-left:57px;
+        }
+        .line2{
+            width: 3px; 
+    background-color:purple; 
+    height: 100%; 
+    float: left;
+    margin-left: 30px;}
+        .line3{
+            width: 3px; 
+    
+    background-color:darkorange;
+    height: 100%; 
+    float: left;
+    margin-left: 30px;
+        }
+        .line4{
+            width: 3px; 
+    background-color:saddlebrown; 
+    height: 100%; 
+    float: left;
+    margin-left: 32px;
+        }
+        .line5{
+            width: 3px; 
+            /* background-color:purple;  */
+           background-color:darkgreen;
+            height: 100%; 
+            float: left;
+            margin-left: 32px;
+            margin-bottom: 38px;
+        }
+       
+        .line7{
+          height: 100%; 
+    float: left;
+    margin-left: 32px;
+    padding-left: 5px;
+    margin-bottom: 78px;
+        }
+      .btn{
+        margin-left: 23px;
+        margin-top: 15px; 
+      } 
+      button{
+          border-radius: 100%;
+          background:rgb(18, 230, 184);
+          color:rgb(0, 32, 139);
+          font-weight: bolder;
+          
+          padding:8px;
+      }
+     marquee{
+       color:white;
+       font-family: 'Festive', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Shadows Into Light', cursive;
+       font-size: 40px;
+       
+     }
+    </style>
+</head>
+<body>
+  <div class="main">
+      <nav>
+          <a href="home.html">Home</a>
+          <a href="2.html">Ukulele</a>
+          <a href="1st.html"> Guitar</a>
+          <a id="f"onclick="f()"> Bass</a>
+          <ul id="b" style="list-style-type: none;">
+              <li><a href="3.html">Bass4</a></li>
+              <li><a href="4.html">Bass5</a></li>
+            </ul>
+      </nav>
+      <marquee direction="right" > &#127928;Bass5 Tune</marquee>
+      <div class="line">
+      <div class="btn">
+          <button id="bt1"onclick="b()">B</button>
+          <button id="bt2"onclick="e()">E</button>
+          <button id="bt3"onclick="a()">A</button>
+          <button id="bt4"onclick="d()">D</button>
+          <button id="bt5"onclick="g()">G</button>
+         
+      </div>
+      <br>
+        <div id="i1"class="line1"onclick="b()"style="height:500px"></div>
+        <div id="i2"class="line2"onclick="e()"style="height:500px;" ></div>
+        <div id="i3"class="line3"onclick="a()"style="height:500px;"></div>
+        <div id="i4"class="line4"onclick="d()"style="height:500px;"></div>
+        <div id="i5"class="line5"onclick="g()"style="height:500px;"></div>
+       
+        <div id="i7"class="line7"></div>
+    </div>
+  </div>
+  <audio id="a"><source src="A11Music.mp3"></audio>
+  <audio id="d"><source src="D21Music.mp3"></audio>
+  <audio id="g"><source src="G21Music.mp3"></audio>
+  <audio id="e"><source src="E11Music.mp3"></audio>
+  <audio id="b1"><source src="B0Music.mp3"></audio>
+  <script>
+    x=document.getElementById("f");
+    y=document.getElementById("b");
+    y.style.display="none";
+    count =0;
+    function f(){
+        if(count==0){    
+        y.style.display="block";
+        count=1;}
+        else{
+            y.style.display="none";
+            count=0;
+        }
+    }
+   bt1=document.getElementById("bt1");
+   bt2=document.getElementById("bt2");
+   bt3=document.getElementById("bt3");
+   bt4=document.getElementById("bt4");
+   bt5=document.getElementById("bt5");
+   
+   i1=document.getElementById("i1");
+   i2=document.getElementById("i2");
+   i3=document.getElementById("i3");
+   i4=document.getElementById("i4");
+   i5=document.getElementById("i5");
+  
+   a1=document.getElementById("a")
+   d1=document.getElementById("d")
+   g1=document.getElementById("g")
+   e1=document.getElementById("e")
+   b1=document.getElementById("b1")
+  function b(){
+      i1.style.backgroundColor="navy"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="darkorange"
+    i4.style.backgroundColor="saddlebrown"
+    i5.style.backgroundColor="darkgreen"
+   
+    b1.play();
+  }
+  function e(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="navy";
+    i3.style.backgroundColor="darkorange"
+    i4.style.backgroundColor="saddlebrown"
+    i5.style.backgroundColor="darkgreen"
+    
+   e1.play();
+  }
+  function a(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="navy"
+    i4.style.backgroundColor="saddlebrown"
+    i5.style.backgroundColor="darkgreen"
+   
+   a1.play();
+  }
+  function d(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="darkorange"
+    i4.style.backgroundColor="navy"
+    i5.style.backgroundColor="darkolivegreen"
+    
+    d1.play();
+  }
+  function g(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="darkorange"
+    i4.style.backgroundColor="saddlebrown"
+    i5.style.backgroundColor="navy"
+    
+    g1.play();
+  }
+</script>
+</body>
+</html>

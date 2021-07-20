@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background:darkseagreen;
+        }
+        a{
+            text-decoration: none;
+            font-size: xx-large;
+            padding:5px;
+            color:orange;
+        }
+        .main{
+         
+            text-align: center;
+            /* background:linear-gradient(to right,rgb(131, 11, 131),yellow,rgb(184, 27, 27)) */
+            /* background-color:darkgreen; */
+            background-color:black ;
+           
+
+        }
+        nav{
+          font-style: italic;
+            padding:5px;
+           text-align:center;
+           color:orange;
+           border-radius: 13px;
+           /* background-color: black; */
+        }
+        .line{
+            display: inline-block;
+    height: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom:10px;
+   border-width: 9px;
+   border-style:solid;
+   border-radius: 39px;
+   border-color: dimgray;
+   /* border-left-color: darkred; */
+   /* border-color: darkorange; */
+   /* background:linear-gradient(to right,rgb(131, 11, 131),yellow,rgb(184, 27, 27)) */
+   background:linear-gradient(to right,purple,burlywood);
+  /* color: */
+        }
+        .line1{
+            width: 3px; 
+    background-color:rgb(202, 17, 17); 
+    height: 100%; 
+    float: left;
+    margin-left:57px;
+        }
+        .line2{
+            width: 3px; 
+    background-color:purple; 
+    height: 100%; 
+    float: left;
+    margin-left: 30px;}
+        .line3{
+            width: 3px; 
+    
+    background-color:darkgreen;
+    height: 100%; 
+    float: left;
+    margin-left: 30px;
+        }
+        .line4{
+            width: 3px; 
+    background-color:saddlebrown; 
+    height: 100%; 
+    float: left;
+    margin-left: 32px;
+    margin-bottom: 38px;
+   }
+      
+        .line7{
+          height: 100%; 
+    float: left;
+    margin-left: 32px;
+    padding-left: 5px;
+    margin-bottom: 78px;
+        }
+      .btn{
+        margin-left: 23px;
+        margin-top: 15px; 
+      } 
+      button{
+          border-radius: 100%;
+          background:rgb(18, 230, 184);
+          color:rgb(0, 32, 139);
+          font-weight: bolder;
+          
+          padding:8px;
+      }
+     marquee{
+       color:white;
+       /* font-family: 'Qahiri', sans-serif; */
+       font-family: 'Festive', cursive;
+       font-size: 40px;
+       
+     }
+    </style>
+</head>
+<body>
+  <div class="main">
+      <nav>
+        <a href="home.html">Home</a>
+          <a href="2.html">Ukulele</a>
+          <a href="1st.html"> Guitar</a>
+          <a id="f"onclick="f()"> Bass</a>
+          <ul id="b" style="list-style-type: none;">
+              <li><a href="3.html">Bass4</a></li>
+              <li><a href="4.html">Bass5</a></li>
+            </ul>
+      </nav>
+      <marquee direction="right" > &#127928;Ukulele Tune</marquee>
+      <div class="line">
+      <div class="btn">
+          <button id="bt1"onclick="g()">G</button>
+          <button id="bt2"onclick="c()">C</button>
+          <button id="bt3"onclick="e()">E</button>
+          <button id="bt4"onclick="a()">A</button>
+          
+      </div>
+      <br>
+        <div id="i1"class="line1"onclick="g()"style="height:400px"></div>
+        <div id="i2"class="line2"onclick="c()"style="height:400px;" ></div>
+        <div id="i3"class="line3"onclick="e()"style="height:400px;"></div>
+        <div id="i4"class="line4"onclick="a()"style="height:400px;"></div>
+        <div id="i7"class="line7"></div>
+    </div>
+  </div>
+  <audio id="a"><source src="a4.mp3"></audio>
+  <audio id="c"><source src="c4.mp3"></audio>
+  <audio id="g"><source src="g4.mp3"></audio>
+  <audio id="e4"><source src="e4 (1).mp3"></audio>
+  <script>
+    x=document.getElementById("f");
+    y=document.getElementById("b");
+    y.style.display="none";
+    count =0;
+    function f(){
+        if(count==0){    
+        y.style.display="block";
+        count=1;}
+        else{
+            y.style.display="none";
+            count=0;
+        }
+    }
+   bt1=document.getElementById("bt1");
+   bt2=document.getElementById("bt2");
+   bt3=document.getElementById("bt3");
+   bt4=document.getElementById("bt4");
+  
+   i1=document.getElementById("i1");
+   i2=document.getElementById("i2");
+   i3=document.getElementById("i3");
+   i4=document.getElementById("i4");
+  
+   a1=document.getElementById("a")
+   c1=document.getElementById("c")
+   g1=document.getElementById("g")
+   e41=document.getElementById("e4")
+  function g(){
+      i1.style.backgroundColor="navy"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="darkgreen"
+    i4.style.backgroundColor="saddlebrown"
+   g1.play();
+
+  }
+  function c(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="navy";
+    i3.style.backgroundColor="darkgreen"
+    i4.style.backgroundColor="saddlebrown"
+    c1.play();
+
+  }
+  function e(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="navy"
+    i4.style.backgroundColor="saddlebrown"
+  e41.play();
+
+  }
+  function a(){
+      i1.style.backgroundColor="rgb(202, 17, 17)"
+    i2.style.backgroundColor="purple";
+    i3.style.backgroundColor="darkgreen"
+    i4.style.backgroundColor="navy"
+    a1.play();
+  }
+  
+</script>
+</body>
+</html>

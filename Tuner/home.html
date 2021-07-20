@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        .main{
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom:10%;
+        }
+        a{
+            text-decoration: none;
+            color:navy;
+            font-weight: bolder;
+        }
+        .b1{
+            font-size: xx-large;
+        }
+        .p1{
+            color:rgb(247, 192, 110);
+        }
+        .p2{
+            font-style: italic;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        .p3{
+          background-color:rgb(86, 243, 235);
+          padding: 10px;
+        }
+        footer{
+            
+            border-style: none;
+            background:black;
+            padding:35px;
+            text-align: center;
+        }
+        i{
+            color:white;
+            padding-left: 35px;
+        }
+        #clock{
+            color:white;  
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <b class="b1">ONLINE GUITAR TUNER</b>
+        <p class="p1">Tune your Acoustic,Bass Guitar and Ukulele</p>
+        <br><br>
+        <img src="guit.jpg"width="50%">
+        <p class="p2">ACOUSTIC GUITAR TUNER</p>
+        <button class="p3"><a href="1st.html">TUNE ACOUSTIC </a></button>
+        <br><br><br>
+        <img src="ukul.jpg"width="50%";>
+        <p class="p2">UKULELE TUNER</p>
+        <button class="p3"><a href="2.html"> TUNE UKULELE </a></button>
+        <br><br><br>
+        <img src="bass3.jpg"width="50%">
+        <p class="p2">BASS4 GUITAR TUNER</p>
+        <button class="p3"><a href="3.html">TUNE BASS4</a></button>
+        <br><br><br>
+        <img src="bass5.jpg"width="50%">
+        <p class="p2">BASS5 GUITAR TUNER</p>
+        <button class="p3"><a href="4.html">TUNE BASS5</a></button>
+    </div>
+</body>
+<footer>
+   <a href="https://www.linkedin.com/in/sananda-dey-2aa407203"> <i class="fa fa-linkedin fa-2x" aria-hidden="true" ></i></a>
+   <a href="https://github.com/19082002"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+   <br><br>
+   <div id="clock"></div>
+   <script>
+       setInterval(displayclock,500);
+       function displayclock(){
+           var time=new Date();
+           var hrs=time.getHours();
+           var min=time.getMinutes();
+           var sec=time.getSeconds();
+           var tit1='AM';
+           
+           if(hrs>12){
+               hrs=hrs-12;
+             tit1='PM';
+           }
+           if(hrs==0){
+               hrs=12;
+           }
+           if(hrs<10)
+           {
+               hrs='0'+hrs;
+           }
+           if(min<10)
+           {
+               min='0'+min;
+           }
+           if(sec<10)
+           {
+               sec='0'+sec;
+           }
+           document.getElementById("clock").innerHTML=hrs+':'+min+':'+sec +"     "+tit1;
+       }
+   </script>
+</footer>
+</html>
